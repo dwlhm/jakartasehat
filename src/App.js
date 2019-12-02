@@ -11,7 +11,6 @@ import TentangAlat from './TentangAlat/TentangAlat';
 import ProfilTim from './ProfilTim/ProfilTim';
 import Faq from './Faq/Faq';
 import CaraKerja from './CaraKerja/CaraKerja';
-import StatusWilayah from './StatusWilayah/StatusWilayah';
 import './App.css';
 
 function App() {
@@ -35,7 +34,7 @@ function App() {
       </Router>
 
       
-      <StatusWilayah />
+      
     </div>
   );
 }

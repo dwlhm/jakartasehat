@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactMapGL, {Marker, Popup } from 'react-map-gl';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import StatusWilayah from '../StatusWilayah/StatusWilayah';
 import './Home.css';
 
 export default class Home extends Component {
@@ -124,7 +126,7 @@ export default class Home extends Component {
 					          <h5 className="card-title">{popupInfo.alat} - {popupInfo.state}</h5>
 					          <h6 className="subtitle">{popupInfo.longitude}, {popupInfo.latitude}</h6>
 					          <p className="card-text">status: {popupInfo.status}</p>
-					          <a href="#" className="btn btn-primary">Detail</a>
+					          <Link to={`${popupInfo.alat}/${popupInfo.state}/`} className="btn btn-primary">Detail</Link>
 					        </div>
 					    </div>
 	          		</div>
@@ -166,6 +168,7 @@ export default class Home extends Component {
 						<li><span>TrashX</span><i className="fas fa-map-marker-alt markerAlat markerTrashX"></i></li>
 					</ul>
 				</div>
+				<StatusWilayah />
 			</div>
 		)	
 	}
