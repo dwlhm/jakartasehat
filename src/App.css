@@ -7,7 +7,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1f2122;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,4 +19,16 @@
 
 .App-link {
   color: #09d3ac;
+}
+div.wrappertentangan {
+    margin: 100px 0 200px 0;
+    width: 100%;
+}
+div.wrappertentangan article.isi {
+    line-height: 30px;
+    font-family: serif;
+    font-size: 17px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align:left;
 }

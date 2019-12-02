@@ -1,0 +1,29 @@
+div#StatusWilayah {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	border: none;
+	background: none;
+}
+div#StatusWilayahWrap {
+	margin: 0 auto;
+	max-width: 500px;
+}
+#bag1 {
+	    display: inline-block;
+    float: left;
+}
+.bag1 h2 {
+    line-height: 23px;
+    text-align: right;
+}
+#lengkapi {
+    text-align: right;
+}
+.bag2 a {
+    font-size: 83px;
+    line-height: 70px;
+    margin: 0;
+}
