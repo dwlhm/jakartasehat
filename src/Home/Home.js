@@ -39,7 +39,7 @@ export default class Home extends Component {
 				.then((response) => {
 					console.log(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
 					var akol = String(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
-
+					akol = "Nagarawangi Kel.";
 			axios.get("https://jkts.herokuapp.com/all/airx/"+akol)
 	            .then( (response) => {
 	            	console.log('1');
@@ -48,11 +48,11 @@ export default class Home extends Component {
 	                axios.get("https://jkts.herokuapp.com/all/xground/"+akol)
 	            .then( (response) => {
 	            	console.log("2");
-	                this.setState({ xflood: response.data });
+	                this.setState({ xground: response.data });
 		                axios.get("https://jkts.herokuapp.com/all/xflood/"+akol)
 		            .then( (response) => {
 		            	console.log("3");
-		                this.setState({ xground: response.data });
+		                this.setState({ xflood: response.data });
 			                axios.get("https://jkts.herokuapp.com/all/trashx/"+akol)
 			            .then( (response) => {
 			            	console.log("4");

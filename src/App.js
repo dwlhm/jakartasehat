@@ -23,7 +23,7 @@ function App() {
               <Route path="/xflood/:lokasi" component={Xflood} />
               <Route path="/airx/:lokasi" component={AirX} />
               <Route path="/trashx/:lokasi" component={TrashX} />
-              <Route path="/xground/:lokasi" component={Xground} />
+              <Route path="/groundx/:lokasi" component={Xground} />
               <Route path="/tentangalat/" component={TentangAlat} />
               <Route path="/profiltim/" component={ProfilTim} />
               <Route path="/faq/" component={Faq} />
