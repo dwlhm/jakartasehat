@@ -21,8 +21,11 @@
   color: #09d3ac;
 }
 div.wrappertentangan {
-    margin: 100px 0 200px 0;
+    margin: 200px 0;
     width: 100%;
+}
+div.wrappertentangan h2 {
+    margin-bottom: 40px;
 }
 div.wrappertentangan article.isi {
     line-height: 30px;
@@ -50,4 +53,7 @@ div.wrappertentangan article.isi {
 .gbgb img {
   height: 100%;
   width: auto;
+}
+.gambar {
+  width: 100%;
 }

@@ -5,9 +5,13 @@ export default class Faq extends Component {
 
 	_getFaqPoint = () => {
 		var faqs = [
-			{"pertanyaan": "Apa itu SMART ENVIRONMENT?", "jawaban": "SMART ENVIRONMENT adalah sebuah prototype alat yang terintegrasi dari beberapa sub alat (X-FLOOD,TRASH-X, AIR-X dan X-GROUND) yang mampu memonitor dan mengkontrol kualitas lingkungan berbasis IoT."},
-			{"pertanyaan": "Apa fungsi dari SMART ENVIRONMENT?", "jawaban": "Fungsi SMART ENVIRONMENT adalah mampu memonitor dan mengkontrol tingkat kualitas tanah, polusi udara, sampah dan banjir berbasis IoT."},
-			{"pertanyaan": "Apa yang mendasari pembuatan SMART ENVIRONMENT?", "jawaban": "Yang mendasari pembuatan SMART ENVIRONMENT adalah keresahan kami terhadap kualitas lingkungan yang buruk, khususnya kota Jakarta."},
+			{"pertanyaan": "Apa itu Jakarta Sehat?", "jawaban": "Jakarta Sehat merupakan visualisasi data dari data - data yang dihimpun dan diproses oleh sistem - sistem dalam Smart Environment"},
+			{"pertanyaan": "Apa itu Smart Environment?", "jawaban": "Smart Environment adalah sistem kompleks yang mengintegrasikan berbagai sistem lain didalamnya."},
+			{"pertanyaan": "Apa yang mendasari terbentuknya Smart Environment(Jakarta Sehat)?", "jawaban": "Smart Environment hadir dari keresahan kami terhadap kondisi lingkungan Jakarta yang sedang tidak baik berdasarkan data."},
+			{"pertanyaan": "Apa keunggulan Smart Environment?", "jawaban": "Smart Environment khususnya dengan Jakarta Sehat mampu meningkatkan tingkat kepedulian publik terhadap masalah kualitas lingkungan di sekitarnya. Dengan sistem realtime serta otomatisasi, Smart Environment menjadi pilihan pertama dalam penanggulangan serta pengawasan setiap perubahan yang memengaruhi kualitas lingkungan"},
+			{"pertanyaan": "Sistem - sistem apa saja yang terintegrasi dalam Smart Environment?", "jawaban": "Smart Environment terintegrasi dengan beberapa modul alat, Jakarta Sehat, dan API. Sistem - sistem tersebut diintegrasikan dalam sistem inti Smart Environment."},
+			{"pertanyaan": "Modul alat apa saja yang terintegrasi dengan Smart Environment?", "jawaban": "X-Flood yang dapat mendeteksi kemungkinan banjir, Air-X yang dapat mendeteksi kualitas udara sekitar, Trash-X yang dapat memberishkan sampah disungai, X-Ground yang dapat mendeteksi kualitas tanah dalam suatu area."},
+			{"pertanyaan": "Berapa maksimal jumlah modul alat yang dapat terintegrasi dengan Smart Environment?", "jawaban": "Tidak ada batasan. Malahan, Smart Environment terbuka terhadap setiap inovasi baru untuk diintegrasikan dengan Smart Environment. Smart Environment sangat terbuka terhadap permintaan untuk mengintegrasikan modul alat yang dibuat oleh publik, apalagi kalau modul alat tersebut memiliki fokus yang sama dengan Smart Environemnt yakni kualitas lingkungan."}
 		];
 		return faqs;
 	}
