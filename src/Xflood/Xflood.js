@@ -42,9 +42,7 @@ export default class Xflood extends Component {
 		            .then( (response) => {
 		            	console.log("4");
 		            	this.setState({ options:{xaxis:{categories: response.data[0]}} })
-		            	this.setState({ series: [{ name: "gas", data: response.data[1] },
-		            							{ name: "ketinggian", data: response.data[2] },
-		            							{ name: "suhu", data: response.data[3] }]
+		            	this.setState({ series: [{ name: "ketinggian", data: response.data[1]}]
 		            				})
 		                this.setState({ xflooddata: [response.data[0], response.data[1]] });
 		                console.log(this.state.xflooddata[0])

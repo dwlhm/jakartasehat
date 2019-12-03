@@ -162,13 +162,13 @@ export default class Home extends Component {
 					
 					{console.log(this.state.airx)}
 
-				    {this.state.airx !== null ? this.state.airx.map(this._renderAirXMarker) : "Loading..."}
+				    {this.state.airx !== null ?  this.state.airx !== "no data" ? this.state.airx.map(this._renderAirXMarker) : "loading..." : "Loading..."}
 
-				    {this.state.xground !== null ? this.state.xground.map(this._renderXGroundMarker) : "Loading..."}
+				    {this.state.xground !== null ? this.state.xground !== "no data" ? this.state.xground.map(this._renderXGroundMarker) : "loading..." : "Loading..."}
 
-				    {this.state.xflood !== null ? this.state.xflood.map(this._renderXFloodMarker) : "Loading..."}
+				    {this.state.xflood !== null ?  this.state.xflood !== "no data" ? this.state.xflood.map(this._renderXFloodMarker) : "loading..." : "Loading..."}
 
-				    {this.state.trashx !== null ? this.state.trashx.map(this._renderTrashXMarker) : "Loading..."}
+				    {this.state.trashx !== null ?  this.state.trashx !== "no data" ? this.state.trashx.map(this._renderTrashXMarker) : "loading..." : "Loading..."}
 				</ReactMapGL>
 				<div id="legenda" className="card">
 					<ul>
