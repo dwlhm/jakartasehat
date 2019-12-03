@@ -34,42 +34,52 @@ export default class Home extends Component {
                 	    longitude: position.coords.longitude
                     }})
                 );				
-			})
-		}
-		axios.get("https://jkts.herokuapp.com/all/airx")
-            .then( (response) => {
-            	console.log('1');
-                this.setState({ airx: response.data });
+			
+		axios.get("https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=" + String(position.coords.latitude) + "%2C" + String(position.coords.longitude) + "%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=9fqnaB6d6rLJWxFpNASK&app_code=RoB26jtN0zFQ1BBhPdJe2A")
+				.then((response) => {
+					console.log(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
+					var akol = String(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
 
-                axios.get("https://jkts.herokuapp.com/all/xground")
-            .then( (response) => {
-            	console.log("2");
-                this.setState({ xflood: response.data });
-                axios.get("https://jkts.herokuapp.com/all/xflood")
-            .then( (response) => {
-            	console.log("3");
-                this.setState({ xground: response.data });
-                axios.get("https://jkts.herokuapp.com/all/trashx")
-            .then( (response) => {
-            	console.log("4");
-                this.setState({ trashx: response.data });
+			axios.get("https://jkts.herokuapp.com/all/airx/"+akol)
+	            .then( (response) => {
+	            	console.log('1');
+	                this.setState({ airx: response.data });
+
+	                axios.get("https://jkts.herokuapp.com/all/xground/"+akol)
+	            .then( (response) => {
+	            	console.log("2");
+	                this.setState({ xflood: response.data });
+		                axios.get("https://jkts.herokuapp.com/all/xflood/"+akol)
+		            .then( (response) => {
+		            	console.log("3");
+		                this.setState({ xground: response.data });
+			                axios.get("https://jkts.herokuapp.com/all/trashx/"+akol)
+			            .then( (response) => {
+			            	console.log("4");
+			                this.setState({ trashx: response.data });
+			            })
+			            .catch( (error) => {
+			                console.log(error);
+			            })
+		            })
+		            .catch( (error) => {
+		                console.log(error);
+		            })
+	            })
+	            .catch( (error) => {
+	                console.log(error);
+	            })
             })
             .catch( (error) => {
                 console.log(error);
             })
-            })
-            .catch( (error) => {
-                console.log(error);
-            })
-            })
-            .catch( (error) => {
-                console.log(error);
-            })
-            })
-            .catch( (error) => {
-                console.log(error);
-            })
-        
+
+        })
+        .catch( (error) => {
+            console.log(error);
+        })
+        })
+		}
 		
 		
 	}

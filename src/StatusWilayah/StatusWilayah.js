@@ -16,35 +16,16 @@ export default class StatusWilayah extends Component {
 	}
 
 	componentDidMount() {
-		axios.get("https://jkts.herokuapp.com/all/airx")
-			.then((response) => {
-				var angka = true;
-				response.data.map((doc) => {
-					console.log("status");
-					console.log(doc.status);
-					if(doc.status == "baik" && angka) {
-						angka = true;
-					} else {
-						angka = false;
-					}
-				})
-				console.log(angka);
-
-				axios.get("https://jkts.herokuapp.com/all/xflood")
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition((position) => {
+         
+			axios.get("https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=" + String(position.coords.latitude) + "%2C" + String(position.coords.longitude) + "%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=9fqnaB6d6rLJWxFpNASK&app_code=RoB26jtN0zFQ1BBhPdJe2A")
 				.then((response) => {
-					response.data.map((doc) => {
-						console.log("status");
-						console.log(doc.status);
-						if(doc.status == "baik" && angka) {
-							angka = true;
-						} else {
-							angka = false;
-						}
-					})
-					console.log(angka);
-
-					axios.get("https://jkts.herokuapp.com/all/xground")
+					console.log(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
+					var kolp = String(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
+				axios.get("https://jkts.herokuapp.com/all/airx/"+ kolp)
 					.then((response) => {
+						var angka = true;
 						response.data.map((doc) => {
 							console.log("status");
 							console.log(doc.status);
@@ -56,7 +37,7 @@ export default class StatusWilayah extends Component {
 						})
 						console.log(angka);
 
-						axios.get("https://jkts.herokuapp.com/all/trashx")
+						axios.get("https://jkts.herokuapp.com/all/xflood/"+ kolp)
 						.then((response) => {
 							response.data.map((doc) => {
 								console.log("status");
@@ -69,11 +50,47 @@ export default class StatusWilayah extends Component {
 							})
 							console.log(angka);
 
-							if (angka) {
-								this.setState({ statuswilayah: "BAIK"});
-							} else {
-								this.setState({ statuswilayah: "KURANG"});
-							}
+							axios.get("https://jkts.herokuapp.com/all/xground/"+ kolp)
+							.then((response) => {
+								response.data.map((doc) => {
+									console.log("status");
+									console.log(doc.status);
+									if(doc.status == "baik" && angka) {
+										angka = true;
+									} else {
+										angka = false;
+									}
+								})
+								console.log(angka);
+
+								axios.get("https://jkts.herokuapp.com/all/trashx/"+ kolp)
+								.then((response) => {
+									response.data.map((doc) => {
+										console.log("status");
+										console.log(doc.status);
+										if(doc.status == "baik" && angka) {
+											angka = true;
+										} else {
+											angka = false;
+										}
+									})
+									console.log(angka);
+
+									if (angka) {
+										this.setState({ statuswilayah: "BAIK"});
+									} else {
+										this.setState({ statuswilayah: "KURANG"});
+									}
+
+								})
+								.catch( (error) => {
+					                console.log(error);
+					            })
+
+							})
+							.catch( (error) => {
+				                console.log(error);
+				            })
 
 						})
 						.catch( (error) => {
@@ -84,16 +101,13 @@ export default class StatusWilayah extends Component {
 					.catch( (error) => {
 		                console.log(error);
 		            })
-
-				})
+		        })
 				.catch( (error) => {
 	                console.log(error);
 	            })
-
+				
 			})
-			.catch( (error) => {
-                console.log(error);
-            })
+		}
 	}
 
 	render () {

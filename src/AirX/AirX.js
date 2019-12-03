@@ -103,7 +103,7 @@ export default class AirX extends Component {
 			          options={this.state.options}
 			          series={this.state.series}
 			          type="bar"
-			          width={0.5*window.innerWidth}
+			          width={window.innerWidth}
 			        />	
 			    </div>
 

@@ -50,12 +50,13 @@ div.wrappertentangan article.isi button.btn.btn-link {
     flex-direction: column;
 }
 .gbgb {
-  max-width: 250px;
-  overflow: hidden;
-  max-height: 140px;
+    text-align: center;
+    overflow: hidden;
 }
 .gbgb img {
   height: 100%;
+  max-height: 140px;
+  max-width: 250px;
   width: auto;
 }
 .gambar {
