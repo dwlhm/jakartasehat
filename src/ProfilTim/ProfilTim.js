@@ -30,7 +30,7 @@ export default class ProfilTim extends Component {
 						    <tr>
 						      <td><img src={elfan} /></td>
 						      <td>
-						      	<tr>Ketua	</tr>
+						      	<tr>Anggota	</tr>
 								<tr>Asal	</tr>
 								<tr>TTL		</tr>
 								<tr>Profesi	</tr>
@@ -45,7 +45,7 @@ export default class ProfilTim extends Component {
 						    <tr>
 						      <td><img src={dwi} /></td>
 						      <td>
-						      	<tr>Ketua	</tr>
+						      	<tr>Anggota	</tr>
 								<tr>Asal	</tr>
 								<tr>TTL		</tr>
 								<tr>Profesi	</tr>
