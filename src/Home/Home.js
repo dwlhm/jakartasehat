@@ -39,8 +39,7 @@ export default class Home extends Component {
 				.then((response) => {
 					console.log(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
 					var akol = String(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
-					akol = "Nagarawangi Kel.";
-			axios.get("https://jkts.herokuapp.com/all/airx/"+akol)
+					axios.get("https://jkts.herokuapp.com/all/airx/"+akol)
 	            .then( (response) => {
 	            	console.log('1');
 	                this.setState({ airx: response.data });
