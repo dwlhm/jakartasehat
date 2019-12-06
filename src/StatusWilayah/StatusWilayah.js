@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './StatusWilayah.css';
 
 export default class StatusWilayah extends Component {
@@ -11,7 +12,8 @@ export default class StatusWilayah extends Component {
 			xground: null,
 			xflood: null,
 			trashx: null,
-			statuswilayah: true
+			statuswilayah: true,
+			wilayah: null
 		}
 	}
 
@@ -23,6 +25,7 @@ export default class StatusWilayah extends Component {
 				.then((response) => {
 					console.log(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
 					var kolp = String(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
+					this.setState({ wilayah: kolp });
 				axios.get("https://jkts.herokuapp.com/all/airx/"+ kolp)
 					.then((response) => {
 						var angka = true;
@@ -118,7 +121,7 @@ export default class StatusWilayah extends Component {
 							<h2>Status <br/>Wilayah <br/>Kamu</h2>
 						</div>
 						<div className="bag2">
-							<a href="#">{this.state.statuswilayah}</a>
+							<Link to={`/dashboard/${this.state.wilayah}`}>{this.state.statuswilayah}</Link>
 						</div>
 						<a href="#" id="lengkapi">*Selengkapnya</a>
 					</div>

@@ -11,6 +11,7 @@ import TentangAlat from './TentangAlat/TentangAlat';
 import ProfilTim from './ProfilTim/ProfilTim';
 import Faq from './Faq/Faq';
 import CaraKerja from './CaraKerja/CaraKerja';
+import Dashboard from './Dashboard/Dashboard';
 import './App.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
               <Route path="/profiltim/" component={ProfilTim} />
               <Route path="/faq/" component={Faq} />
               <Route path="/carakerja/" component={CaraKerja} />
+              <Route path="/dashboard/" component={Dashboard} />
           
         </div>
         <Nav />

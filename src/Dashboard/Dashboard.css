@@ -1,0 +1,21 @@
+.dashboard {
+	margin: 150px 0;
+}
+.kartuStatus {
+	overflow: hidden;
+    max-height: 140px;
+}
+.kartuStatus img {
+	width: auto;
+	height: 100%;
+}
+.detaildashboard {
+	text-align: right;
+	margin-top: 10px;
+}
+a.linkstatus {
+    background: #17a2b8;
+    color: #fff;
+    padding: 5px;
+    margin-top: 5px;
+}

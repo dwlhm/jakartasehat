@@ -39,20 +39,20 @@ export default class Home extends Component {
 				.then((response) => {
 					console.log(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
 					var akol = String(response.data.Response.View[0].Result[0].Location.Address.Subdistrict);
-					axios.get("https://jkts.herokuapp.com/all/airx/"+akol)
+					axios.get("https://jkts.herokuapp.com/all/airx/")
 	            .then( (response) => {
 	            	console.log('1');
 	                this.setState({ airx: response.data });
 
-	                axios.get("https://jkts.herokuapp.com/all/xground/"+akol)
+	                axios.get("https://jkts.herokuapp.com/all/xground/")
 	            .then( (response) => {
 	            	console.log("2");
 	                this.setState({ xground: response.data });
-		                axios.get("https://jkts.herokuapp.com/all/xflood/"+akol)
+		                axios.get("https://jkts.herokuapp.com/all/xflood/")
 		            .then( (response) => {
 		            	console.log("3");
 		                this.setState({ xflood: response.data });
-			                axios.get("https://jkts.herokuapp.com/all/trashx/"+akol)
+			                axios.get("https://jkts.herokuapp.com/all/trashx/")
 			            .then( (response) => {
 			            	console.log("4");
 			                this.setState({ trashx: response.data });
