@@ -116,6 +116,7 @@ export default class StatusWilayah extends Component {
 	render () {
 		return(
 				<div className="card" id="StatusWilayah">
+
 					<div id="StatusWilayahWrap">
 						<div className="bag1">
 							<h2>Status <br/>Wilayah <br/>Kamu</h2>
@@ -123,7 +124,7 @@ export default class StatusWilayah extends Component {
 						<div className="bag2">
 							<Link to={`/dashboard/${this.state.wilayah}`}>{this.state.statuswilayah}</Link>
 						</div>
-						<a href="#" id="lengkapi">*Selengkapnya</a>
+						<a href="#" id="lengkapi"  data-toggle="popover" data-placement="top" data-content="*Baik: lingkunganmu terdeteksi dalam kategori baik dalam artian sehat, *Kurang: lingkunganmu terdeteksi dalam kondisi kurang baik.">*Selengkapnya</a>
 					</div>
 				</div>
 			)
