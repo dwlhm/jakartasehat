@@ -171,10 +171,7 @@ export default class Home extends Component {
 				</ReactMapGL>
 				<div id="legenda" className="card">
 					<ul>
-						<li><span>AirX</span><i className="fas fa-map-marker-alt markerAlat markerAirX"></i></li>
-						<li><span>XFlood</span><i className="fas fa-map-marker-alt markerAlat markerXFlood"></i></li>
-						<li><span>XGround</span><i className="fas fa-map-marker-alt markerAlat markerXGround"></i></li>
-						<li><span>TrashX</span><i className="fas fa-map-marker-alt markerAlat markerTrashX"></i></li>
+						<li><span>S-Fit</span><i className="fas fa-map-marker-alt markerAlat markerTrashX"></i></li>
 					</ul>
 				</div>
 				<StatusWilayah />
