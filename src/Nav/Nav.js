@@ -15,7 +15,7 @@ export default class Nav extends Component {
 		    					<ul id="nav-mobile" className="right hide-on-med-and-down">
 		        					<li className="card" id="khususon"><Link to="/">Bandung <br/><span className="sehat">Bersih</span></Link></li>
 		        					<li className="card" id="khususon1"><Link to="/tentangalat/">Tentang <br/> <span class="jakarta">Bandung</span><br/> <span class="sehat">Bersih</span></Link></li>
-		        					<li className="card" id="khususon1"><Link to="/profiltim/">Profil <span className="elco">Elco</span><br/> <span className="siliwangi">_Siliwangi</span><br/> <span className="team">Team</span></Link></li>
+		        					<li className="card hid" id="khususon1"><Link to="/profiltim/">Profil <span className="elco">Elco</span><br/> <span className="siliwangi">_Siliwangi</span><br/> <span className="team">Team</span></Link></li>
 		        					<li className="card"><Link to="/faq/"><i className="fas fa-question-circle ikon" />FAQ</Link></li>
 		        					<li className="card"><Link to="/carakerja/"><i className="fas fa-cogs ikon" />Cara Kerja</Link></li>
 		    					</ul>

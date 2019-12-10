@@ -107,3 +107,6 @@ span.team {
 #nav-mobile li.text-white a, #nav-mobile li.text-white a i {
     color: inherit;
 }
+.hid {
+    display: none;
+}
